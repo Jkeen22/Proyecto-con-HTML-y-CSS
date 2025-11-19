@@ -1,5 +1,5 @@
 # Proyectos
-Aqui encontraras dos proyectos:
+Aqui encontraras 3 proyectos:
 
 1. Un bloggers
 
