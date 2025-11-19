@@ -5,6 +5,7 @@
     --card: #1a1a1a;
     --text: #eaeaea;
     --accent: #4da3ff;
+    --accent2: #66c2ff;
 }
 
 * {
@@ -30,6 +31,7 @@ header {
 header h1 {
     font-size: 2.7rem;
     color: var(--accent);
+    letter-spacing: 1px;
 }
 
 header p {
@@ -46,13 +48,14 @@ header p {
     background: var(--card);
     border-radius: 12px;
     border: 1px solid #2e2e2e;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     animation: slideUp 0.7s ease;
 }
 
 .section h2 {
-    color: var(--accent);
+    color: var(--accent2);
     margin-bottom: 10px;
+    font-size: 1.8rem;
 }
 
 /* TEXTO */
@@ -62,11 +65,37 @@ header p {
     margin-bottom: 20px;
 }
 
-/* TARJETAS */
+/* PRODUCTO DESTACADO */
+.featured {
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2e2e2e;
+}
+
+.featured h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.featured p {
+    opacity: 0.85;
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.featured .price {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--accent2);
+    font-weight: bold;
+}
+
+/* TARJETAS DE PRODUCTOS */
 .cards {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin-top: 20px;
 }
 
@@ -85,7 +114,17 @@ header p {
 
 .card h3 {
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.price-small {
+    color: var(--accent2);
+    font-weight: bold;
 }
 
 /* FOOTER */
@@ -110,7 +149,7 @@ footer {
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 0 12px rgba(77, 163, 255, 0.5);
+    box-shadow: 0 0 12px rgba(77,163,255,0.5);
     transition: transform 0.2s ease, opacity 0.3s;
 }
 
@@ -121,18 +160,11 @@ footer {
 
 /* ANIMACIONES */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: tra
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
