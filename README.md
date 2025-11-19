@@ -1,4 +1,4 @@
-# Proyecto con HTML y CSS
+# Proyectos
 Aqui encontraras dos proyectos:
 
 1. Un bloggers
